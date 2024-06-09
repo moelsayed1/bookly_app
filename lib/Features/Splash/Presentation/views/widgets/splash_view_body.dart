@@ -1,4 +1,4 @@
-import 'package:bookly_app/Core/utiles/assets.dart';
+import 'package:bookly_app/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -11,6 +11,13 @@ class SplashViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
+        const SizedBox(
+          height: 3,
+        ),
+        const Text(
+          'R  e  a  d    F  r  e  e    B  o  o  k  s',
+          textAlign: TextAlign.center,
+        ),
       ],
     );
   }
