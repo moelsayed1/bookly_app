@@ -11,7 +11,7 @@ class BookRating extends StatelessWidget {
         Icon(
           Icons.star_rounded,
           color: Color(0xffFDDA4A),
-          size: 28,
+          size: 26,
         ),
         SizedBox(
           width: 6.3,
