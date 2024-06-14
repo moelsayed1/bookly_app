@@ -45,7 +45,10 @@ class BookListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.5,
+                    height: 12,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.4,
                     child: Text(
                       'Harry Potter and the Goblet of Fire',
                       style: Style.textStyle20.copyWith(
@@ -88,5 +91,3 @@ class BookListViewItem extends StatelessWidget {
     );
   }
 }
-
-
