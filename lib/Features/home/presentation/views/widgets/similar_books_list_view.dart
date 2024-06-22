@@ -13,7 +13,9 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 10.0),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                imageUrl: 'https://www.google.com/imgres?q=cover%20books%20of%20flutter%20programming%20books&imgurl=https%3A%2F%2Fwww.flutterengineering.io%2Fbookcover_isbn.png&imgrefurl=https%3A%2F%2Fwww.flutterengineering.io%2F&docid=HOaU5zWMEBuslM&tbnid=mBXcapWi0iMC_M&vet=12ahUKEwjUjbCoqvCGAxVnVqQEHQQ_DswQM3oECHMQAA..i&w=1200&h=1090&hcb=2&ved=2ahUKEwjUjbCoqvCGAxVnVqQEHQQ_DswQM3oECHMQAA',
+              ),
             );
           }),
     );

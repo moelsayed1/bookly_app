@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bookly_app/Features/home/data/models/image_links.dart';
 import 'package:bookly_app/Features/home/data/models/industry_identifier.dart';
 import 'package:bookly_app/Features/home/data/models/panelization_summary.dart';
@@ -130,7 +132,7 @@ DateTime? _parsePublishedDate(String? dateString) {
   try {
     return DateFormat('yyyy-MM-dd').parse(dateString);
   } catch (e) {
-    print('Error parsing date: $e - $dateString');
+    log('Error parsing date: $e - $dateString');
     return null;
   }
 }
