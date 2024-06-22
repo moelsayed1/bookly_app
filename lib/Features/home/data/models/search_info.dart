@@ -1,14 +1,14 @@
 import 'package:equatable/equatable.dart';
 
-class SearchInfo extends Equatable{
-  final String textSnippet;
+class SearchInfo extends Equatable {
+  final String? textSnippet; // Make textSnippet optional
 
   const SearchInfo({
-    required this.textSnippet,
+    this.textSnippet, // Provide a default value if needed
   });
 
   factory SearchInfo.fromJson(Map<String, dynamic> json) => SearchInfo(
-    textSnippet: json["textSnippet"],
+    textSnippet: json["textSnippet"] ?? 'No Snippet',
   );
 
   Map<String, dynamic> toJson() => {
@@ -16,5 +16,5 @@ class SearchInfo extends Equatable{
   };
 
   @override
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [textSnippet];
 }

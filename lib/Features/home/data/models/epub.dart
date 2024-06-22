@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class Epub extends Equatable{
+class Epub extends Equatable {
   final bool isAvailable;
 
   const Epub({
@@ -8,12 +8,13 @@ class Epub extends Equatable{
   });
 
   factory Epub.fromJson(Map<String, dynamic> json) => Epub(
-    isAvailable: json["isAvailable"],
+    isAvailable: json["isAvailable"] ?? false,
   );
 
   Map<String, dynamic> toJson() => {
     "isAvailable": isAvailable,
   };
+
   @override
   List<Object?> get props => [isAvailable];
 }

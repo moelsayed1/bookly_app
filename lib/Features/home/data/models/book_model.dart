@@ -40,10 +40,10 @@ class BookModel extends Equatable{
         id: json["id"],
         etag: json["etag"],
         selfLink: json["selfLink"],
-        volumeInfo: VolumeInfo.fromJson(json["volumeInfo"]),
-        saleInfo: SaleInfo.fromJson(json["saleInfo"]),
-        accessInfo: AccessInfo.fromJson(json["accessInfo"]),
-        searchInfo: SearchInfo.fromJson(json["searchInfo"]),
+        volumeInfo: json["volumeInfo"] != null ? VolumeInfo.fromJson(json["volumeInfo"]) : const VolumeInfo(), // Handle null volumeInfo
+        saleInfo: json["saleInfo"] != null ? SaleInfo.fromJson(json["saleInfo"]) : const SaleInfo(), // Handle null saleInfo
+        accessInfo: json["accessInfo"] != null ? AccessInfo.fromJson(json["accessInfo"]) : const AccessInfo(), // Handle null accessInfo
+        searchInfo: json["searchInfo"] != null ? SearchInfo.fromJson(json["searchInfo"]) : const SearchInfo(), // Handle null searchInfo
     );
 
     Map<String, dynamic> toJson() => {

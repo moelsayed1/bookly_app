@@ -1,39 +1,39 @@
 import 'package:bookly_app/Features/home/data/models/epub.dart';
 import 'package:equatable/equatable.dart';
 
-class AccessInfo extends Equatable{
-  final String country;
-  final String viewability;
-  final bool embeddable;
-  final bool publicDomain;
-  final String textToSpeechPermission;
-  final Epub epub;
-  final Epub pdf;
-  final String webReaderLink;
-  final String accessViewStatus;
-  final bool quoteSharingAllowed;
+class AccessInfo extends Equatable {
+  final String? country;
+  final String? viewability;
+  final bool? embeddable;
+  final bool? publicDomain;
+  final String? textToSpeechPermission;
+  final Epub? epub;
+  final Epub? pdf;
+  final String? webReaderLink;
+  final String? accessViewStatus;
+  final bool? quoteSharingAllowed;
 
   const AccessInfo({
-    required this.country,
-    required this.viewability,
-    required this.embeddable,
-    required this.publicDomain,
-    required this.textToSpeechPermission,
-    required this.epub,
-    required this.pdf,
-    required this.webReaderLink,
-    required this.accessViewStatus,
-    required this.quoteSharingAllowed,
+    this.country,
+    this.viewability,
+    this.embeddable,
+    this.publicDomain,
+    this.textToSpeechPermission,
+    this.epub,
+    this.pdf,
+    this.webReaderLink,
+    this.accessViewStatus,
+    this.quoteSharingAllowed,
   });
 
   factory AccessInfo.fromJson(Map<String, dynamic> json) => AccessInfo(
     country: json["country"],
     viewability: json["viewability"],
-    embeddable: json["embeddable"],
+    embeddable: json["embeddable"] ?? false,
     publicDomain: json["publicDomain"],
     textToSpeechPermission: json["textToSpeechPermission"],
-    epub: Epub.fromJson(json["epub"]),
-    pdf: Epub.fromJson(json["pdf"]),
+    epub: json["epub"] != null ? Epub.fromJson(json["epub"]) : null,
+    pdf: json["pdf"] != null ? Epub.fromJson(json["pdf"]) : null,
     webReaderLink: json["webReaderLink"],
     accessViewStatus: json["accessViewStatus"],
     quoteSharingAllowed: json["quoteSharingAllowed"],
@@ -45,25 +45,19 @@ class AccessInfo extends Equatable{
     "embeddable": embeddable,
     "publicDomain": publicDomain,
     "textToSpeechPermission": textToSpeechPermission,
-    "epub": epub.toJson(),
-    "pdf": pdf.toJson(),
+    "epub": epub?.toJson(),
+    "pdf": pdf?.toJson(),
     "webReaderLink": webReaderLink,
     "accessViewStatus": accessViewStatus,
     "quoteSharingAllowed": quoteSharingAllowed,
   };
+
   @override
-  List<Object?> get props {
-    return [
-      country,
-      viewability,
-      embeddable,
-      publicDomain,
-      textToSpeechPermission,
-      epub,
-      pdf,
-      webReaderLink,
-      accessViewStatus,
-      quoteSharingAllowed,
-    ];
-  }
+  List<Object?> get props => throw UnimplementedError();
+
+  // You can now check the availability of the Epub version
+  bool get isEpubAvailable => epub?.isAvailable ?? false;
+
+  // Similarly, check for the PDF version
+  bool get isPdfAvailable => pdf?.isAvailable ?? false;
 }
