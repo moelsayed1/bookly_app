@@ -27,6 +27,8 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
+  final int? averageRating;
+  final int? ratingsCount;
 
   const VolumeInfo({
     this.title,
@@ -48,6 +50,8 @@ class VolumeInfo extends Equatable {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.averageRating,
+    this.ratingsCount,
   });
 
 
@@ -87,6 +91,8 @@ class VolumeInfo extends Equatable {
     previewLink: json["previewLink"],
     infoLink: json["infoLink"],
     canonicalVolumeLink: json["canonicalVolumeLink"],
+    averageRating: json["averageRating"],
+    ratingsCount: json["ratingsCount"],
   );
 
   // Method to convert a VolumeInfo object to JSON
@@ -118,6 +124,8 @@ class VolumeInfo extends Equatable {
     "previewLink": previewLink,
     "infoLink": infoLink,
     "canonicalVolumeLink": canonicalVolumeLink,
+    "averageRating": averageRating,
+    "ratingsCount": ratingsCount,
   };
 
 
