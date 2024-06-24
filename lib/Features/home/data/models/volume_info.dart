@@ -27,7 +27,7 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
-  final int? averageRating;
+  final num? averageRating;
   final int? ratingsCount;
 
   const VolumeInfo({

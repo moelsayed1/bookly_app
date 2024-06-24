@@ -20,7 +20,7 @@ class NewestBooksListViewItem extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: SizedBox(
-        height: 140,
+          height: 140,
         child: Row(
           children: [
             Padding(
