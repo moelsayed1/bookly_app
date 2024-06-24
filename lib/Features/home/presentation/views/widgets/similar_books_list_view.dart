@@ -17,13 +17,15 @@ class SimilarBooksListView extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * 0.14,
             child: ListView.builder(
+                physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
+                itemCount: state.books.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child: CustomBookImage(
                       imageUrl:
-                          'https://docs.flutter.dev/assets/images/docs/cover/flutter-apprentice-2nd.png',
+                          state.books[index].volumeInfo.imageLinks!.thumbnail,
                     ),
                   );
                 }),
