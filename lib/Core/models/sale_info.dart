@@ -1,5 +1,5 @@
-import 'package:bookly_app/Features/home/data/models/offer.dart';
-import 'package:bookly_app/Features/home/data/models/sale_info_list_price.dart';
+import 'package:bookly_app/Core/models/offer.dart';
+import 'package:bookly_app/Core/models/sale_info_list_price.dart';
 import 'package:equatable/equatable.dart';
 
 class SaleInfo extends Equatable {

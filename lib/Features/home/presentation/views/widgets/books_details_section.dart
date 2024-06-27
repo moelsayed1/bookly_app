@@ -1,5 +1,5 @@
+import 'package:bookly_app/Core/models/book_model.dart';
 import 'package:bookly_app/Core/utils/styles.dart';
-import 'package:bookly_app/Features/home/data/models/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/books_action.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/books_rating.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
@@ -24,7 +24,7 @@ class BooksDetailsSection extends StatelessWidget {
             imageUrl: book.volumeInfo.imageLinks!.thumbnail,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 35,
         ),
         Text(
@@ -32,7 +32,7 @@ class BooksDetailsSection extends StatelessWidget {
           style: Style.textStyle30,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 6,
         ),
         Text(
@@ -42,7 +42,7 @@ class BooksDetailsSection extends StatelessWidget {
             color: Colors.white.withOpacity(0.7),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18,
         ),
         BookRating(
@@ -50,7 +50,7 @@ class BooksDetailsSection extends StatelessWidget {
           rating: book.volumeInfo.averageRating ?? 0,
           count: book.volumeInfo.ratingsCount ?? 0,
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         BooksAction(

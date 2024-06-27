@@ -4,10 +4,11 @@
 
 import 'dart:convert';
 
-import 'package:bookly_app/Features/home/data/models/access_info.dart';
-import 'package:bookly_app/Features/home/data/models/sale_info.dart';
-import 'package:bookly_app/Features/home/data/models/search_info.dart';
-import 'package:bookly_app/Features/home/data/models/volume_info.dart';
+
+import 'package:bookly_app/Core/models/access_info.dart';
+import 'package:bookly_app/Core/models/sale_info.dart';
+import 'package:bookly_app/Core/models/search_info.dart';
+import 'package:bookly_app/Core/models/volume_info.dart';
 import 'package:equatable/equatable.dart';
 
 BookModel bookModelFromJson(String str) => BookModel.fromJson(json.decode(str));

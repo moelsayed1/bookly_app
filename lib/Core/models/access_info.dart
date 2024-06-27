@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/home/data/models/epub.dart';
+import 'package:bookly_app/Core/models/epub.dart';
 import 'package:equatable/equatable.dart';
 
 class AccessInfo extends Equatable {

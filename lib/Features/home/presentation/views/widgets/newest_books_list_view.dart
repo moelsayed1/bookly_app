@@ -15,10 +15,10 @@ class NewestBooksListView extends StatelessWidget {
       builder: (context, state) {
         if (state is NewestBooksSuccess) {
           return Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.zero,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
@@ -31,7 +31,7 @@ class NewestBooksListView extends StatelessWidget {
         } else if (state is NewestBooksFailure) {
           return CustomErrorWidget(errMessage: state.errMessage);
         } else {
-          return CustomLoadingIndicator();
+          return const CustomLoadingIndicator();
         }
       },
     );

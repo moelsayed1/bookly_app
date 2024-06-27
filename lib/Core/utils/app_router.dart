@@ -1,6 +1,6 @@
+import 'package:bookly_app/Core/models/book_model.dart';
 import 'package:bookly_app/Core/utils/service_locator.dart';
 import 'package:bookly_app/Features/Splash/Presentation/views/splash_view.dart';
-import 'package:bookly_app/Features/home/data/models/book_model.dart';
 import 'package:bookly_app/Features/home/data/repo/home_repo_impl.dart';
 import 'package:bookly_app/Features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly_app/Features/home/presentation/views/book_details_view.dart';
@@ -18,11 +18,11 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => SplashView(),
+        builder: (context, state) => const SplashView(),
       ),
       GoRoute(
         path: kHomeView,
-        builder: (context, state) => HomeView(),
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
         path: kBookDetailsView,
@@ -37,7 +37,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kSearchView,
-        builder: (context, state) => SearchView(),
+        builder: (context, state) => const SearchView(),
       ),
     ],
   );

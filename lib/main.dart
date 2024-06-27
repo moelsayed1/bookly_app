@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'Features/search/data/repos/search_repo_impl.dart';
+import 'Features/search/presentation/manager/search_book_cubit/search_cubit.dart';
+
 void main() {
   setupServiceLocator();
   runApp(const BooklyApp());
@@ -29,6 +32,9 @@ class BooklyApp extends StatelessWidget {
           create: (context) => NewestBooksCubit(
             getIt.get<HomeRepoImpl>(),
           )..fetchNewestBooks(),
+        ),
+        BlocProvider(
+          create: (context) => SearchCubit(getIt.get<SearchRepoImpl>()),
         ),
       ],
       child: MaterialApp.router(

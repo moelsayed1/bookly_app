@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/home/data/models/offer_list_price.dart';
+import 'package:bookly_app/Core/models/offer_list_price.dart';
 import 'package:equatable/equatable.dart';
 
 class Offer extends Equatable{

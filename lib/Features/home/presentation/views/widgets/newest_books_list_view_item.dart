@@ -1,6 +1,6 @@
+import 'package:bookly_app/Core/models/book_model.dart';
 import 'package:bookly_app/Core/utils/app_router.dart';
 import 'package:bookly_app/Core/utils/styles.dart';
-import 'package:bookly_app/Features/home/data/models/book_model.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/books_rating.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly_app/constant.dart';
@@ -27,14 +27,14 @@ class NewestBooksListViewItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 10),
               child: CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30,
             ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   SizedBox(
@@ -48,16 +48,16 @@ class NewestBooksListViewItem extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Text(
                     bookModel.volumeInfo.authors![0],
                     style: Style.textStyle14.copyWith(
-                      color: Color(0xff6F6F6F),
+                      color: const Color(0xff6F6F6F),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Row(
